@@ -1254,7 +1254,7 @@ a:hover{color:#6b828b}
 #site-logo span{display:block;width:100%}
 #site-logo a{width:100%;height:120px;text-align:center;background-color:#2b4d59;border-bottom-right-radius:500px;border-bottom-left-radius:500px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 #site-logo a img{width:110px;height:auto;position:relative;top:-2px}
-.site-header{background-color:rgba(11,21,25,0.9);position:absolute;top:0;left:0;width:100%}
+.site-header{background-color:rgba(11,21,25,0.9);position:absolute;top:0;left:0;width:100%;z-index:200}
 .site-header .wrapper{max-width:1000px}
 #site-navigation ul.menu{margin:0;padding:0;list-style:none;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 #site-navigation ul.menu>li{display:inline-block}
