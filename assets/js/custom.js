@@ -13,4 +13,7 @@ jQuery(document).ready(function ($) {
       $(this).parents("li").addClass("logo-area");
     }
   });
+  $('[data-fancybox]').fancybox({
+    protect: true
+  });
 });

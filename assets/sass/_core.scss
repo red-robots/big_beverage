@@ -85,6 +85,10 @@ a {
 		z-index: 100000; /* Above WP toolbar. */
 	}
 }
+.flexwrap {
+	position: relative;
+	@include flexgroup();
+}
 .site {
 	position: relative;
 	overflow-x: hidden;
@@ -212,13 +216,61 @@ a {
 
 .hero {
 	height: 500px;
+	position: relative;
 	@include tab {
-		height: 95vh;
+		height: 600px;
+	}
+	@include desk {
+		height: 800px;
+	}
+	@include xxl {
+		height: 900px;
 	}
 	.hero-image {
 		height: 100%;
 		background-color: #CCC;
 		@include backgroundImage(center);
+	}
+	.hero-caption {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		@include flexgroup-center();
+		@include flexbox-justify(center);
+		.textwrap {
+			width: 100%;
+			text-align: center;
+		}
+		.inner {
+			max-width: 700px;
+			width: 100%;
+			margin: 0 auto;
+			text-transform: uppercase;
+			color: #FFF;
+		}
+		.text {
+			font-family: $font_secondary;
+			font-size: 1.3rem;
+			font-weight: 700;
+			line-height: 1.2;
+			text-shadow: 0 6px 15px rgba(3,17,26,0.85);
+			@include tab {
+				font-size: 1.8rem;
+			}
+			@include desk {
+				font-size: 2rem;
+			}
+		}
+		div.button {
+			margin-top: 20px;
+		}
+		.btn-default {
+			text-transform: none;
+			box-shadow: 0 7px 17px rgba(0,0,0,0.4);
+		}
 	}
 }
 
@@ -236,7 +288,10 @@ h1,h2,h3,h4,h5,h6 {
 	text-transform: uppercase;
 	color: #000;
 	@include tab {
-		font-size: 4rem;
+		font-size: 2rem;
+	}
+	@include desk {
+		font-size: 3rem;
 	}
 }
 
@@ -245,10 +300,10 @@ h1,h2,h3,h4,h5,h6 {
 	text-decoration: none;
 	color: #FFF;
 	background: $secondary;
-	min-width: 160px;
-	padding: 10px 20px;
+	min-width: 165px;
+	padding: 8px 20px 7px;
 	font-weight: bold;
-  font-size: 15px;
+  font-size: 16px;
   text-align: center;
   overflow: hidden;
   position: relative;
@@ -256,17 +311,22 @@ h1,h2,h3,h4,h5,h6 {
   	content: "";
   	display: block;
   	width: 100%;
-  	height: 100%;
+  	height: 105%;
   	position: absolute;
   	top: 0;
   	left: 0;
   	transition: all ease .3s;
   	background: #93ccd6;
-		background: -moz-linear-gradient(top,  #93ccd6 0%, #4396b2 56%, #3594b5 100%);
-		background: -webkit-linear-gradient(top,  #93ccd6 0%,#4396b2 56%,#3594b5 100%);
-		background: linear-gradient(to bottom,  #93ccd6 0%,#4396b2 56%,#3594b5 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93ccd6', endColorstr='#3594b5',GradientType=0 );
-  	transform: translateY(-50%);
+		// background: -moz-linear-gradient(top,  #93ccd6 0%, #4396b2 56%, #3594b5 100%);
+		// background: -webkit-linear-gradient(top,  #93ccd6 0%,#4396b2 56%,#3594b5 100%);
+		// background: linear-gradient(to bottom,  #93ccd6 0%,#4396b2 56%,#3594b5 100%);
+		// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93ccd6', endColorstr='#3594b5',GradientType=0 );
+		background: rgb(136,206,232);
+		background: -moz-linear-gradient(top,  rgba(136,206,232,1) 0%, rgba(43,143,173,1) 49%, rgba(41,140,170,1) 50%, rgba(28,138,168,1) 60%, rgba(53,148,181,1) 100%);
+		background: -webkit-linear-gradient(top,  rgba(136,206,232,1) 0%,rgba(43,143,173,1) 49%,rgba(41,140,170,1) 50%,rgba(28,138,168,1) 60%,rgba(53,148,181,1) 100%);
+		background: linear-gradient(to bottom,  rgba(136,206,232,1) 0%,rgba(43,143,173,1) 49%,rgba(41,140,170,1) 50%,rgba(28,138,168,1) 60%,rgba(53,148,181,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88cee8', endColorstr='#3594b5',GradientType=0 );
+  	transform: translateY(-20%);
   	opacity: 0;
   }
   span {
@@ -276,6 +336,7 @@ h1,h2,h3,h4,h5,h6 {
   }
   &:hover {
   	text-decoration: none;
+  	text-shadow: 0 1px 2px rgba(3,17,26,0.2);
 		color: #FFF;
 		&:before {
 			opacity: 1;
@@ -297,15 +358,457 @@ h1,h2,h3,h4,h5,h6 {
 	.entry-content {
 		position: relative;
 		z-index: 10;
-		// background-image:url('images/home-overlay-2.png');
-		// background-position: top center;
-		// background-repeat: no-repeat;
-		// background-size: cover;
 	}
 	.section1 {
+		background-image:url('images/home-overlay-2.png');
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		.wrapper {
+			padding-top: 50px;
+			padding-bottom: 100px;
+		}
 		div.button {
 			margin-top: 30px;
 		}
 	}
 }
 
+
+.dark-blue-area {
+	background: #112026;
+	color: #FFF;
+	position: relative;
+	z-index: 30;
+	overflow: hidden;
+	@include tab {
+		overflow: visible;
+	}
+	.flexwrap {
+		@include tab {
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+	}
+	.h2 {
+		color: #FFF;
+	}
+	.info {
+
+	}
+	.fcol {
+		width: 100%;
+		position: relative;
+		padding: 10px 20px;
+		@include tab {
+			width: 50%;
+		}
+		&.image {
+			padding-top: 0;
+			padding-bottom: 90px;
+			@include tab {
+				padding-top: 90px;
+			}
+			&:before {
+				content:"";
+				display: block;
+				width: 25vw;
+				height: 25vw;
+				border-radius: 100%;
+				border: 2px solid $primary;
+				position: absolute;
+				top: -7vw;
+				left: -3vw;
+				@include tab {
+					width: 16vw;
+					height: 16vw;
+					top: 2vw;
+					left: -4vw;
+				}
+			}
+			&:after {
+				content:"";
+				display: block;
+				width: 20vw;
+				height: 20vw;
+				position: absolute;
+				top: -20vw;
+				right: 4vw;
+				background-image:url('images/bubbles-3.svg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size:100%;
+				@include tab {
+					width: 10vw;
+					height: 10vw;
+					top: -5vw;
+					right: 4vw;
+				}
+			}
+		}
+		.feat-image {
+			display: block;
+			width: 100%;
+			float: left;
+			overflow: hidden;
+			position: relative;
+			z-index: 5;
+			* {
+				transition: all ease .3s;
+			}
+			span.image {
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				@include backgroundImage(center);
+			}
+			img {
+				width: 100%;
+				height: auto;
+				float: left;
+			}
+			.playbtn {
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: rgba(0,0,0,.15);
+				z-index: 10;
+				i {
+					display: block;
+					width: 85px;
+					height: 85px;
+					overflow: hidden;
+					text-indent: -999em;
+					background-image:url('images/play.svg');
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size:100%;
+					background-color: rgba(255,255,255,.15);
+					border-radius: 100%;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translateX(-50%) translateY(-50%);
+				}
+			}
+			&.has-video:hover {
+				.playbtn {
+					background-color: rgba(0,0,0,.35);
+				}
+				// span.image {
+				// 	transform: scale(1.1);
+				// }
+			}
+		}
+		&.text {
+			text-align: center;
+			padding:0 0;
+			padding-top: 80px;
+			padding-bottom: 105px;
+			@include tab {
+				padding-right: 5vw;
+				padding-left: 5vw;
+				padding-bottom: 80px;
+				overflow: hidden;
+			}
+			@include desk {
+				padding-left: 0;
+			}
+			div.button {
+				margin-top: 30px;
+			}
+			&:after {
+				content:"";
+				display: block;
+				border-radius: 100%;
+				background: #14282f;
+				position: absolute;
+				left: 50%;
+				bottom: 10vw;
+				transform: translateX(-50%);
+				width: 70vw;
+				height: 70vw;
+				@include tab {
+					width: 42vw;
+					height: 42vw;
+					left: 0;
+					bottom: -22vw;
+					transform: none;
+				}
+			}
+		}
+		.align-middle {
+			height: 100%;
+			z-index: 10;
+			position: relative;
+			@include flexgroup-center();
+			@include flexbox-justify(center);
+			.mid {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.light-blue-area {
+	background-image:url('images/bubble-blue-bg.png');
+	background-color: #348dac;
+	padding-top: 100px;
+	@include backgroundImage(bottom center);
+	.h2 {
+		color: #FFF;
+	}
+	.titlediv {
+		margin-bottom: 80px;
+	}
+	.circles {
+		position: relative;
+		top: -12vw;
+		* {
+			transition: all ease .3s;
+		}
+		.flexwrap {
+			margin-left: -15px;
+			margin-right: -15px;
+			@include desk {
+				margin-left: -25px;
+				margin-right: -25px;
+			}
+		}
+		.circle {
+			width: 100%;
+			padding: 15px 25px;
+			@include xs {
+				width: 80%;
+				margin: 0 auto;
+			}
+			@include tab {
+				width: 33.33%;
+				margin: 0 0;
+				padding: 15px 15px;
+			}
+			@include desk {
+				padding: 15px 25px;
+			}
+			.pad {
+				width: 100%;
+				float: left;
+				border: 2px solid #E6E6E6;
+				border-radius: 100%;
+				padding: 5px;
+				.pad2 {
+					width: 100%;
+					float: left;
+					padding: 8px;
+					position: relative;
+				}
+			}
+			.info {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 10;
+				width: 100%;
+				height: 100%;
+				background: #E6E6E6;
+				border-radius: 100%;
+				padding: 25px;
+				overflow: hidden;
+				@include flexgroup-center();
+				.mid {
+					width: 100%;
+				}
+			}
+			div.icon {
+				margin-bottom: 12px;
+				img {
+					width: auto;
+					height: 30px;
+					@include tab {
+						height: 20px;
+					}
+					@include desk {
+						height: 30px;
+					}
+				}
+			}
+			.title {
+				font-size: 22px;
+				font-weight: 700;
+				line-height: 1.2;
+				text-transform: uppercase;
+				margin: 0 0 0 ;
+				@include tab {
+					font-size: 1.5vw;
+				}
+				@include desk {
+					font-size: 22px;
+				}
+				span {
+					display: block;
+					width: 100%;
+					&.blue {
+						color: $secondary;
+					}
+					&.dark {
+						color: $primary;
+					}
+				}
+			}
+			.text {
+				padding: 0 5%;
+				font-size: 15px;
+				line-height: 1.4;
+				margin-top: 22px;
+				color: $primary;
+				@include tab {
+					margin-top: 1vw;
+					font-size: 1.2vw;
+				}
+				@include desk {
+					margin-top: 22px;
+					font-size: 15px;
+				}
+			}
+			img.helper {
+				width: 100%;
+				height: auto;
+				float: left;
+			}
+		}
+	}
+
+	.why-bottom-area {
+		@include backgroundImage(center);
+		background-image:url('images/why-bottom-image.png');
+		color: #FFF;
+		margin-top: 16vw;
+	}
+	.bottom-caption {
+		position: relative;
+    top: -6vw;
+    text-align: center;
+    padding-bottom: 60px;
+    .inside {
+    	max-width: 700px;
+			width: 100%;
+			margin: 0 auto;
+    }
+    .text {
+    	font-family: $font_secondary;
+			font-size: 1.3rem;
+			font-weight: 700;
+			line-height: 1.2;
+			text-shadow: 0 6px 15px rgba(3,17,26,0.85);
+			@include tab {
+				font-size: 1.8rem;
+			}
+			@include desk {
+				font-size: 2rem;
+			}
+    }
+    div.button {
+    	margin-top: 30px;
+    }
+	}
+}
+
+
+/* FOOTER */
+.site-footer {
+	background: #000;
+	color: #FFF;
+	position: relative;
+	z-index: 30;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	.foot-logo-area {
+		text-align: center;
+		width: 100%;
+		position: absolute;
+		top: -60px;
+		left: 0;
+		span {
+			width: 120px;
+			height: 120px;
+			border-radius: 100%;
+			background: #000;
+			@include flexgroup-center();
+			@include flexbox-justify(center);
+			padding: 12px;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				  position: relative;
+				top: -8px;
+			}
+		}
+	}
+
+	.footer-info {
+		color: #FFF;
+		text-align: center;
+		.wrap {
+			display: inline-block;
+		}
+		.inner {
+			@include tab {
+				// @include flexbox();
+				// @include flexbox-justify(center);
+			}
+		}
+		.f-info {
+			width: 100%;
+			padding: 0 15px;
+			text-align: center;
+			font-size: 15px;
+			letter-spacing: 1px;
+			span {
+				color: #FFF;
+				opacity: 0.5;
+			}
+			@include tab {
+				display: inline-block;
+				padding: 0 2vw;
+				width: auto;
+			}
+			&.social-media {
+				opacity: 1;
+			}
+			a {
+				display: inline-block;
+				text-decoration: none;
+				color: #FFF;
+				opacity: 0.5;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.social-media {
+		a {
+			display: inline-block;
+			color: #FFF;
+			opacity: 0.5;
+			text-decoration: none;
+			font-size: 20px;
+			line-height: 1;
+			margin: 5px 3px;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
