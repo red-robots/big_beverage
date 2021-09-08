@@ -1327,7 +1327,7 @@ h1,h2,h3,h4,h5,h6{font-family:"Almarai",sans-serif;font-weight:800;color:#000}
 .light-blue-area .why-bottom-area{background-size:cover;background-position:center;background-repeat:no-repeat;background-image:url("images/why-bottom-image.png");color:#FFF;margin-top:0}
 .light-blue-area .bottom-caption{position:relative;top:-6vw;text-align:center;padding-bottom:60px}
 .light-blue-area .bottom-caption .inside{max-width:700px;width:100%;margin:0 auto}
-.light-blue-area .bottom-caption .text{font-family:"Almarai",sans-serif;font-size:1.3rem;font-weight:700;line-height:1.2;text-shadow:0 6px 15px rgba(3,17,26,0.85)}
+.light-blue-area .bottom-caption .text{font-family:"Almarai",sans-serif;font-size:1.3rem;font-weight:700;line-height:1.2}
 .light-blue-area .bottom-caption div.button{margin-top:30px}
 .site-footer{background:#000;color:#FFF;position:relative;z-index:30;padding-top:50px;padding-bottom:50px}
 .site-footer .foot-logo-area{text-align:center;width:100%;position:absolute;top:-60px;left:0}
