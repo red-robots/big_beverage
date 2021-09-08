@@ -557,15 +557,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .light-blue-area {
-	background-image:url('images/bubble-blue-bg.png');
-	background-color: #348dac;
-	padding-top: 100px;
-	@include backgroundImage(bottom center);
 	.h2 {
 		color: #FFF;
 	}
 	.titlediv {
-		margin-bottom: 80px;
+		background-image:url('images/bubble-blue-bg.png');
+		background-color: #348dac;
+		@include backgroundImage(bottom center);
+		padding-top: 100px;
+		padding-bottom: 230px;
 	}
 	.circles {
 		position: relative;
@@ -688,7 +688,7 @@ h1,h2,h3,h4,h5,h6 {
 		@include backgroundImage(center);
 		background-image:url('images/why-bottom-image.png');
 		color: #FFF;
-		margin-top: 16vw;
+		margin-top: 0;
 	}
 	.bottom-caption {
 		position: relative;

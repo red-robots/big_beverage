@@ -49,8 +49,10 @@ get_header(); ?>
 
 		<!--- LIGHT BLUE SECTION -->
 		<div class="light-blue-area">
-			<div class="titlediv wrapper text-center">
-				<h2 class="h2">Why Big Beverages?</h2>
+			<div class="titlediv">
+				<div class="wrapper text-center">
+					<h2 class="h2">Why Big Beverages?</h2>
+				</div>
 			</div>
 
 			<div class="why-bottom-area">

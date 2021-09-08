@@ -1306,9 +1306,8 @@ h1,h2,h3,h4,h5,h6{font-family:"Almarai",sans-serif;font-weight:800;color:#000}
 .dark-blue-area .fcol.text:after{content:"";display:block;border-radius:100%;background:#14282f;position:absolute;left:50%;bottom:10vw;-webkit-transform:translateX(-50%);transform:translateX(-50%);width:70vw;height:70vw}
 .dark-blue-area .fcol .align-middle{height:100%;z-index:10;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .dark-blue-area .fcol .align-middle .mid{width:100%}
-.light-blue-area{background-image:url("images/bubble-blue-bg.png");background-color:#348dac;padding-top:100px;background-size:cover;background-position:bottom center;background-repeat:no-repeat}
 .light-blue-area .h2{color:#FFF}
-.light-blue-area .titlediv{margin-bottom:80px}
+.light-blue-area .titlediv{background-image:url("images/bubble-blue-bg.png");background-color:#348dac;background-size:cover;background-position:bottom center;background-repeat:no-repeat;padding-top:100px;padding-bottom:230px}
 .light-blue-area .circles{position:relative;top:-12vw}
 .light-blue-area .circles *{-webkit-transition:all ease .3s;transition:all ease .3s}
 .light-blue-area .circles .flexwrap{margin-left:-15px;margin-right:-15px}
@@ -1325,7 +1324,7 @@ h1,h2,h3,h4,h5,h6{font-family:"Almarai",sans-serif;font-weight:800;color:#000}
 .light-blue-area .circles .circle .title span.dark{color:#2b4d59}
 .light-blue-area .circles .circle .text{padding:0 5%;font-size:15px;line-height:1.4;margin-top:22px;color:#2b4d59}
 .light-blue-area .circles .circle img.helper{width:100%;height:auto;float:left}
-.light-blue-area .why-bottom-area{background-size:cover;background-position:center;background-repeat:no-repeat;background-image:url("images/why-bottom-image.png");color:#FFF;margin-top:16vw}
+.light-blue-area .why-bottom-area{background-size:cover;background-position:center;background-repeat:no-repeat;background-image:url("images/why-bottom-image.png");color:#FFF;margin-top:0}
 .light-blue-area .bottom-caption{position:relative;top:-6vw;text-align:center;padding-bottom:60px}
 .light-blue-area .bottom-caption .inside{max-width:700px;width:100%;margin:0 auto}
 .light-blue-area .bottom-caption .text{font-family:"Almarai",sans-serif;font-size:1.3rem;font-weight:700;line-height:1.2;text-shadow:0 6px 15px rgba(3,17,26,0.85)}
