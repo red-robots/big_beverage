@@ -13,10 +13,10 @@
  */
 get_header(); ?>
 <div id="primary" class="content-area">
-	<main id="main" class="site-main">
+	<main id="main" class="site-main wrapper">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<header class="entry-title"><?php the_title(); ?></header>
-			<section class="entry-content"><?php the_content(); ?></section>
+      <header class="entry-title"><h1><?php the_title(); ?></h1></header>
+      <section class="entry-content"><?php the_content(); ?></section>
 		<?php endwhile; ?>	
 	</main>
 </div>

@@ -824,6 +824,29 @@ h1,h2,h3,h4,h5,h6 {
 	}
 }
 
+body.subpage {
+  background-color: #000;
+  .site-header {
+    position: relative;
+  }
+  .site-content {
+    background-color: #FFF;
+    min-height: 30em;
+  }
+  #main {
+    padding-top: 70px;
+  }
+}
+
+.entry-title h1 {
+  font-family: $font_secondary;
+  font-weight:800;
+  font-size: 3em;
+  line-height: 1.2;
+  color: $primary;
+  margin:0 0 20px;
+}
+
 
 /* FOOTER */
 .site-footer {
