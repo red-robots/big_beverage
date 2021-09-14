@@ -35,7 +35,7 @@ var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){
 </script>
 <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class();?>>
 <div id="page" class="site cf">
 	<div id="overlay"></div>
 	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
@@ -51,7 +51,10 @@ var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){
             <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
         <?php } ?>
 			</div>
-			<nav id="site-navigation" class="main-navigation" role="navigation"><?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu','link_before'=>'<span>','link_after'=>'</span>','container'=>false) ); ?></nav>
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class'=>'menu-container', 'menu_id' => 'primary-menu','link_before'=>'<span>','link_after'=>'</span>',) ); ?>
+      </nav>
+      <span class="mobile-menu"><span id="menutoggle"><span class="bar"></span><i>Menu</i></span></span>
 		</div>	
 	</header>
 

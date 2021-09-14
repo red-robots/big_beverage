@@ -22,6 +22,9 @@ function my_login_logo() {
   $logo_url = ($logoImg) ? $logoImg[0] : '';
   if($custom_logo_id) { ?>
   <style type="text/css">
+    body.login {
+      background-color: #2B4C59;
+    }
     body.login div#login h1 a {
       background-image: url(<?php echo $logo_url; ?>);
       background-size: contain;
@@ -32,7 +35,39 @@ function my_login_logo() {
     .login #backtoblog, .login #nav {
       text-align: center;
     }
-
+    body.login #backtoblog a, 
+    body.login #nav a {
+      color: #F3B932;
+      transition: all ease .3s;
+    }
+    body.login #backtoblog a:hover,
+    body.login #nav a:hover {
+      color: #fff0cb;
+    }
+    body.login form {
+      border: none;
+      border-radius: 10px;
+    }
+    body.login #login form p.submit {
+      display: block;
+      width: 100%;
+    }
+    body.login #login form p.submit input.button-primary {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+    }
+    body.login.wp-core-ui .button-primary {
+      background: #3594B5;
+      border-color: #3594B5;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all ease .3s;
+    }
+    body.login.wp-core-ui .button-primary:hover {
+      background: #38a9d0;
+    }
   </style>
 <?php }
 }
