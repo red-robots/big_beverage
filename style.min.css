@@ -1395,7 +1395,7 @@ body.subpage{background-color:#000}
 body.subpage .site-header{position:relative}
 body.subpage .site-content{background-color:#FFF;min-height:30em}
 body.subpage #main{padding-top:70px}
-.entry-title h1{font-family:"Almarai",sans-serif;font-weight:800;font-size:3em;line-height:1.2;color:#2b4d59;margin:0 0 20px}
+.page-title{font-family:"Almarai",sans-serif;font-weight:800;font-size:3em;line-height:1.2;color:#2b4d59;margin:0 0 20px}
 .site-footer{background:#000;color:#FFF;position:relative;z-index:30;padding-top:50px;padding-bottom:50px}
 .site-footer .foot-logo-area{text-align:center;width:100%;position:absolute;top:-60px;left:0}
 .site-footer .foot-logo-area span{width:120px;height:120px;border-radius:100%;background:#000;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:12px;position:relative;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
