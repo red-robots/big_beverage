@@ -847,6 +847,29 @@ body.subpage {
   margin:0 0 20px;
 }
 
+#sitemap-wrap {
+  margin-top: 30px;
+  ul {
+    @include tab {
+      column-count: 2;
+      max-width: 800px;
+      width: 100%;
+      li {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+         break-inside: avoid;
+      }
+    }
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #0d86c1;
+    &:hover {
+      color: #41befb;
+    }
+  }
+}
 
 /* FOOTER */
 .site-footer {

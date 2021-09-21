@@ -1396,6 +1396,9 @@ body.subpage .site-header{position:relative}
 body.subpage .site-content{background-color:#FFF;min-height:30em}
 body.subpage #main{padding-top:70px}
 .page-title{font-family:"Almarai",sans-serif;font-weight:800;font-size:3em;line-height:1.2;color:#2b4d59;margin:0 0 20px}
+#sitemap-wrap{margin-top:30px}
+#sitemap-wrap a{display:inline-block;text-decoration:none;color:#0d86c1}
+#sitemap-wrap a:hover{color:#41befb}
 .site-footer{background:#000;color:#FFF;position:relative;z-index:30;padding-top:50px;padding-bottom:50px}
 .site-footer .foot-logo-area{text-align:center;width:100%;position:absolute;top:-60px;left:0}
 .site-footer .foot-logo-area span{width:120px;height:120px;border-radius:100%;background:#000;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:12px;position:relative;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
@@ -1427,6 +1430,8 @@ body.subpage #main{padding-top:70px}
 .light-blue-area .circles .circle .title{font-size:1.5vw}
 .light-blue-area .circles .circle .text{margin-top:1vw;font-size:1.2vw}
 .light-blue-area .bottom-caption .text{font-size:1.8rem}
+#sitemap-wrap ul{-webkit-column-count:2;-moz-column-count:2;column-count:2;max-width:800px;width:100%}
+#sitemap-wrap ul li{-webkit-column-break-inside:avoid;page-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid}
 .site-footer .footer-info .f-info{display:inline-block;padding:0 2vw;width:auto}
 .site-footer .footer-info .f-info.social-media{margin-top:0}
 }@media(min-width:1200px){.swiper-container,.swiper-wrapper,.swiper-slide,.hero,.sliderTexts{height:800px}
