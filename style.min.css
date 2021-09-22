@@ -1399,6 +1399,25 @@ body.subpage #main{padding-top:70px}
 #sitemap-wrap{margin-top:30px}
 #sitemap-wrap a{display:inline-block;text-decoration:none;color:#0d86c1}
 #sitemap-wrap a:hover{color:#41befb}
+.contact-form-wrapper{padding-top:10px;padding-bottom:100px}
+.contact-form-wrapper .flexwrap{margin-left:-30px;margin-right:-30px}
+.contact-form-wrapper .fcol{width:100%;padding:30px}
+.contact-form-wrapper .mapframe{background:#f1f3f4;height:300px}
+.contact-form-wrapper .mapframe iframe{width:100% !important;height:100% !important}
+.info-icon{margin-bottom:8px;padding-left:25px;position:relative}
+.info-icon a{text-decoration:none}
+.info-icon a:hover{color:#3594b5}
+.info-icon:before{content:"";display:block;width:25px;height:25px;position:absolute;top:2px;left:0;background-repeat:no-repeat;background-size:65%}
+.info-icon.address:before{top:-1px;background-image:url("images/icons/marker.svg")}
+.info-icon.phone:before{background-size:60%;background-image:url("images/icons/phone.svg")}
+.info-icon.email:before{top:3px;background-size:70%;background-image:url("images/icons/email.svg")}
+.contact-info-icons{margin-bottom:25px}
+.contact-form .gform_wrapper.gravity-theme .gfield textarea,.contact-form .gform_wrapper.gravity-theme .gfield textarea.large,.contact-form .gform_wrapper.gravity-theme input[type="text"],.contact-form .gform_wrapper.gravity-theme input[type="email"],.contact-form .gform_wrapper .gfield textarea,.contact-form .gform_wrapper .gfield textarea.large,.contact-form .gform_wrapper input[type="text"],.contact-form .gform_wrapper input[type="email"]{border-radius:0;border:1px solid #000;outline:0;-webkit-appearence:none;-webkit-box-shadow:none;box-shadow:none}
+.contact-form .gform_wrapper.gravity-theme .gfield textarea:focus,.contact-form .gform_wrapper.gravity-theme .gfield textarea.large:focus,.contact-form .gform_wrapper.gravity-theme input[type="text"]:focus,.contact-form .gform_wrapper.gravity-theme input[type="email"]:focus,.contact-form .gform_wrapper .gfield textarea:focus,.contact-form .gform_wrapper .gfield textarea.large:focus,.contact-form .gform_wrapper input[type="text"]:focus,.contact-form .gform_wrapper input[type="email"]:focus{border-color:#3fa8d2;-webkit-box-shadow:0 0 14px rgba(63,168,210,0.5);box-shadow:0 0 14px rgba(63,168,210,0.5)}
+.contact-form .gform_wrapper.gravity-theme.gravity-theme .gfield textarea.large,.contact-form .gform_wrapper.gravity-theme .gfield textarea,.contact-form .gform_wrapper.gravity-theme .gfield textarea.large,.contact-form .gform_wrapper .gfield textarea{height:200px}
+.contact-form .gform_wrapper.gravity-theme .gform_footer,.contact-form .gform_wrapper .gform_footer{width:100%;float:left;margin:15px 0 0;padding:0}
+.contact-form .gform_wrapper.gravity-theme .gform_footer input.gform_button,.contact-form .gform_wrapper .gform_footer input.gform_button{margin:0;float:right;border-radius:0;border:1px solid #2b4d59;outline:0;-webkit-appearence:none;-webkit-box-shadow:none;box-shadow:none;background:#2b4d59;color:#FFF;text-transform:uppercase;padding:12px 30px 10px;font-size:18px;line-height:1;letter-spacing:1px}
+.contact-form .gform_wrapper.gravity-theme .gform_footer input.gform_button:hover,.contact-form .gform_wrapper .gform_footer input.gform_button:hover{border-color:#3594b5;background:#3594b5}
 .site-footer{background:#000;color:#FFF;position:relative;z-index:30;padding-top:50px;padding-bottom:50px}
 .site-footer .foot-logo-area{text-align:center;width:100%;position:absolute;top:-60px;left:0}
 .site-footer .foot-logo-area span{width:120px;height:120px;border-radius:100%;background:#000;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:12px;position:relative;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
@@ -1432,6 +1451,8 @@ body.subpage #main{padding-top:70px}
 .light-blue-area .bottom-caption .text{font-size:1.8rem}
 #sitemap-wrap ul{-webkit-column-count:2;-moz-column-count:2;column-count:2;max-width:800px;width:100%}
 #sitemap-wrap ul li{-webkit-column-break-inside:avoid;page-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid}
+.contact-form-wrapper .fcol{width:50%}
+.contact-form-wrapper .mapframe{height:473px}
 .site-footer .footer-info .f-info{display:inline-block;padding:0 2vw;width:auto}
 .site-footer .footer-info .f-info.social-media{margin-top:0}
 }@media(min-width:1200px){.swiper-container,.swiper-wrapper,.swiper-slide,.hero,.sliderTexts{height:800px}
