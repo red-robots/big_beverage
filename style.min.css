@@ -1339,10 +1339,10 @@ a:hover{color:#6b828b}
 .subpage-banner{width:100%;position:relative;height:300px}
 .subpage-banner:after{content:"";display:block;width:100%;height:100%;background-image:url("images/hero-wave.png");background-position:bottom center;background-repeat:no-repeat;background-size:100%;position:absolute;left:0;bottom:0;z-index:5}
 .subpage-banner .banner-image{width:100%;height:100%;position:absolute;top:0;left:0;background-size:cover;background-position:center;background-repeat:no-repeat}
-.subpage-banner .banner-image .titlediv{width:100%;height:82%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.subpage-banner .banner-image .titlediv{width:100%;height:105%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .subpage-banner .banner-image .titlediv:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:rgba(0,0,0,0.35)}
 .subpage-banner .banner-image .inner{width:100%;text-align:center;position:relative;z-index:15}
-.subpage-banner .banner-image h1{margin:0;color:#FFF;font-family:"Almarai",sans-serif;font-weight:800;font-size:4rem;line-height:1.2;text-transform:uppercase;text-shadow:0 2px 9px rgba(0,0,0,0.3)}
+.subpage-banner .banner-image h1{margin:0;color:#FFF;font-family:"Almarai",sans-serif;font-weight:800;font-size:2.5rem;line-height:1.2;text-transform:uppercase;text-shadow:0 2px 9px rgba(0,0,0,0.3)}
 .subpage-banner img.helper{display:none;width:100%;height:auto;float:left}
 h1,h2,h3,h4,h5,h6{font-family:"Almarai",sans-serif;font-weight:800;color:#000}
 .h2{font-family:"Almarai",sans-serif;font-size:30px;font-weight:800;line-height:1.2;margin:0 0 30px;text-transform:uppercase;color:#000}
@@ -1460,6 +1460,8 @@ body.subpage.has-banner .site-content #main{padding-top:0}
 .hero .hero-caption .text{font-size:1.8rem}
 .sliderTexts .textwrap .text{font-size:1.8rem}
 .subpage-banner{height:500px}
+.subpage-banner .banner-image .titlediv{height:82%}
+.subpage-banner .banner-image h1{font-size:4rem}
 .h2{font-size:2rem}
 .dark-blue-area{overflow:visible}
 .dark-blue-area .flexwrap{margin-left:-20px;margin-right:-20px}

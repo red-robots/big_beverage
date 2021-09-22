@@ -404,7 +404,7 @@ a {
     @include backgroundImage(center);
     .titlediv {
       width: 100%;
-      height: 82%;
+      height: 105%;
       @include flexgroup-center();
       &:before {
         content:"";
@@ -415,6 +415,9 @@ a {
         top: 0;
         left: 0;
         background: rgba(0,0,0,.35);
+      }
+      @include tab {
+        height: 82%;
       }
     }
     .inner {
@@ -428,10 +431,13 @@ a {
       color: #FFF;
       font-family: $font_secondary;
       font-weight: 800;
-      font-size: 4rem;
+      font-size: 2.5rem;
       line-height: 1.2;
       text-transform: uppercase;
       text-shadow: 0 2px 9px rgba(0,0,0,0.3);
+      @include tab {
+        font-size: 4rem;
+      }
     }
   }
   img.helper {
