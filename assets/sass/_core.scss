@@ -1260,6 +1260,9 @@ body.subpage {
         @include tab {
           padding: 0 5vw;
         }
+        @include desk {
+          padding: 0 8vw;
+        }
       }
     }
     .fcol.imagecol {

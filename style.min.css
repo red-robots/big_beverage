@@ -1545,6 +1545,7 @@ body.subpage.has-banner .site-content #main{padding-top:0}
 .light-blue-area .circles .circle .text{margin-top:22px;font-size:15px}
 .light-blue-area .bottom-caption .text{font-size:2rem}
 .page-about .row2 .imagewrap .inner:before{width:15vw}
+.page-about .row3 .fcol.textcol .text{padding:0 8vw}
 }@media(min-width:1300px){.swiper-container,.swiper-wrapper,.swiper-slide,.hero,.sliderTexts{height:900px}
 }@media screen and (min-width:1500px){.page-about .row2 .imagewrap .inner:before{width:10vw}
 }@media screen and (max-width:820px){.site-header{position:relative;top:0;left:0;z-index:300}
