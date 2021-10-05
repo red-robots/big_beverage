@@ -1,10 +1,14 @@
 <?php  
 $banner = get_field("banner"); 
 $count = 0;
+$hero_type = '';
+$hero_video = '';
 if( is_front_page() || is_home() ) {
 	$banner = get_field("banner");
 	$count = ($banner) ? count($banner) : 0;
 	$slidesId = ($count>1) ? 'slideshow':'static-banner';
+  $hero_type = get_field('hero_type');
+  $hero_video = get_field('hero_video');
 }
 if( $banner ){ ?>
 
@@ -12,20 +16,43 @@ if( $banner ){ ?>
 		<?php 
     /* HOME */
     if( is_front_page() || is_home() ) { ?>
-    <!-- SLIDER IMAGES -->
-    <div id="<?php echo $slidesId ?>" class="swiper-container">
-      <div class="swiper-wrapper">
-			<?php $j=1; foreach ($banner as $b) { 
-				$image = $b['image'];
-				$caption = $b['caption'];
-				if($image) { ?>
-				<div class="swiper-slide hero" data-slide="slide<?php echo $j?>">
-					<div class="hero-image" style="background-image:url('<?php echo $image['url'] ?>')"></div>
-				</div>
-				<?php $j++; } ?>
-			<?php } ?>
-      </div>
-    </div>
+
+      <?php if ( $hero_type=='video' ) { ?>
+
+        <?php if ($hero_video) { ?>
+        <div id="static-banner" class="video-hero">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide hero">
+              <video width="960" height="720" autoplay controls muted loop>
+                <?php if ($hero_video) { ?>
+                  <source src="<?php echo $hero_video['url'] ?>" type="video/mp4">
+                <?php } ?>
+                Your browser does not support the video tag.
+              </video>
+              <img src="<?php echo get_images_dir('rectangle.png') ?>" alt="" class="video-helper" />
+            </div>
+          </div>
+        </div>
+        <?php } ?>
+
+      <?php } else { ?>
+        
+        <!-- SLIDER IMAGES -->
+        <div id="<?php echo $slidesId ?>" class="swiper-container">
+          <div class="swiper-wrapper">
+          <?php $j=1; foreach ($banner as $b) { 
+            $image = $b['image'];
+            $caption = $b['caption'];
+            if($image) { ?>
+            <div class="swiper-slide hero" data-slide="slide<?php echo $j?>">
+              <div class="hero-image" style="background-image:url('<?php echo $image['url'] ?>')"></div>
+            </div>
+            <?php $j++; } ?>
+          <?php } ?>
+          </div>
+        </div>
+
+      <?php } ?>
 
     <?php if ($count) { ?>
     <!-- SLIDER CAPTIONS -->
