@@ -2,7 +2,7 @@
 $banner = get_field("banner"); 
 $count = 0;
 $hero_type = '';
-$hero_video = '';
+$hero_video = 'images';
 if( is_front_page() || is_home() ) {
 	$banner = get_field("banner");
 	$count = ($banner) ? count($banner) : 0;
@@ -55,39 +55,68 @@ if( $banner ){ ?>
       <?php } ?>
 
     <?php if ($count) { ?>
-    <!-- SLIDER CAPTIONS -->
+
+    <!-- HERO CAPTIONS -->
     <div class="sliderTexts">
-      <?php $j=1; foreach ($banner as $b) { 
-        $image = $b['image'];
-        $caption = $b['caption'];
-        $btn = $b['button'];
-        $button_target = ( isset($btn['target']) ) ? $btn['target'] : '_self';
-        $button_text = ( isset($btn['title']) ) ? $btn['title'] : '';
-        $button_link = ( isset($btn['url']) ) ? $btn['url'] : '';
-        if($image) { ?>
 
-          <div class="slideCaption slide<?php echo $j?><?php echo ($j==1) ? ' active':'' ?>" data-slide="slide<?php echo $j?>">
-            <?php if ($caption) { ?>
-            <div class="textwrap">
-              <div class="inner text-center">
-                <div class="text"><?php echo $caption ?></div>
-                <?php if ($button_text && $button_link) { ?>
-                <div class="button">
-                  <a href="<?php echo $button_link ?>" class="btn-default"><span><?php echo $button_text ?></span></a>
-                </div>
-                <?php } ?>
+      <?php if ( $hero_type=='video' ) { ?>
+
+        <?php 
+        $hero_videoTxt = get_field("hero_video_text"); 
+        $hero_videoBtn = get_field("hero_video_button"); 
+        $button_target = ( isset($hero_videoBtn['target']) ) ? $hero_videoBtn['target'] : '_self';
+        $button_text = ( isset($hero_videoBtn['title']) ) ? $hero_videoBtn['title'] : '';
+        $button_link = ( isset($hero_videoBtn['url']) ) ? $hero_videoBtn['url'] : '';
+        ?>
+        <div class="slideCaption active">
+          <?php if ($hero_videoTxt) { ?>
+          <div class="textwrap">
+            <div class="inner text-center">
+              <div class="text"><?php echo $hero_videoTxt ?></div>
+              <?php if ($button_text && $button_link) { ?>
+              <div class="button">
+                <a href="<?php echo $button_link ?>" class="btn-default"><span><?php echo $button_text ?></span></a>
               </div>
+              <?php } ?>
             </div>
-            <?php } ?>
           </div>
+          <?php } ?>
+        </div>
 
-        <?php $j++; } ?>
-      <?php } ?>
+      <?php } else { ?>
 
-      <?php if ($count>1) { ?>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+        <?php $j=1; foreach ($banner as $b) { 
+          $image = $b['image'];
+          $caption = $b['caption'];
+          $btn = $b['button'];
+          $button_target = ( isset($btn['target']) ) ? $btn['target'] : '_self';
+          $button_text = ( isset($btn['title']) ) ? $btn['title'] : '';
+          $button_link = ( isset($btn['url']) ) ? $btn['url'] : '';
+          if($image) { ?>
+
+            <div class="slideCaption slide<?php echo $j?><?php echo ($j==1) ? ' active':'' ?>" data-slide="slide<?php echo $j?>">
+              <?php if ($caption) { ?>
+              <div class="textwrap">
+                <div class="inner text-center">
+                  <div class="text"><?php echo $caption ?></div>
+                  <?php if ($button_text && $button_link) { ?>
+                  <div class="button">
+                    <a href="<?php echo $button_link ?>" class="btn-default"><span><?php echo $button_text ?></span></a>
+                  </div>
+                  <?php } ?>
+                </div>
+              </div>
+              <?php } ?>
+            </div>
+
+          <?php $j++; } ?>
+        <?php } ?>
+
+        <?php if ($count>1) { ?>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <?php } ?>
       <?php } ?>
     </div>
     <?php } ?>
