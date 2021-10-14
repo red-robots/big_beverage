@@ -1289,12 +1289,16 @@ body.subpage {
       }
       .text {
         width: 100%;
-        padding: 0 20px;
+        padding: 20px 20px;
         @include tab {
-          padding: 0 5vw;
+          padding-top: 70px;
+          padding-bottom: 60px;
+          padding-left: 5vw;
+          padding-right: 5vw;
         }
         @include desk {
-          padding: 0 8vw;
+          padding-left: 8vw;
+          padding-right: 8vw;
         }
       }
     }

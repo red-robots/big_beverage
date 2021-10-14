@@ -1449,7 +1449,7 @@ body.subpage.has-banner .site-content #main{padding-top:0}
 .page-about .row3 .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .page-about .row3 .fcol{width:100%}
 .page-about .row3 .fcol.textcol{padding-top:50px;padding-bottom:50px}
-.page-about .row3 .fcol.textcol .text{width:100%;padding:0 20px}
+.page-about .row3 .fcol.textcol .text{width:100%;padding:20px 20px}
 .page-about .row3 .fcol.imagecol img{width:100%;height:auto;display:block}
 .bubble-bg{position:relative}
 .bubble-bg:before,.bubble-bg:after{content:"";display:block;position:absolute;border-radius:100%}
@@ -1530,7 +1530,7 @@ body.subpage.has-banner .site-content #main{padding-top:0}
 .page-about .row2 .imagewrap div.img{height:100%}
 .page-about .row2 .imagewrap div.img img{display:none}
 .page-about .row3 .fcol.textcol{padding-top:0;padding-bottom:0;width:60%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.page-about .row3 .fcol.textcol .text{padding:0 5vw}
+.page-about .row3 .fcol.textcol .text{padding-top:70px;padding-bottom:60px;padding-left:5vw;padding-right:5vw}
 .page-about .row3 .fcol.imagecol{width:40%;min-height:25em}
 .page-about .row3 .fcol.imagecol div.img{height:100%;background-size:cover;background-position:center;background-repeat:no-repeat}
 .page-about .row3 .fcol.imagecol img{display:none}
@@ -1550,7 +1550,7 @@ body.subpage.has-banner .site-content #main{padding-top:0}
 .light-blue-area .circles .circle .text{margin-top:22px;font-size:15px}
 .light-blue-area .bottom-caption .text{font-size:2rem}
 .page-about .row2 .imagewrap .inner:before{width:15vw}
-.page-about .row3 .fcol.textcol .text{padding:0 8vw}
+.page-about .row3 .fcol.textcol .text{padding-left:8vw;padding-right:8vw}
 }@media(min-width:1300px){.swiper-container,.swiper-wrapper,.swiper-slide,.hero,.sliderTexts{height:900px}
 }@media screen and (min-width:1500px){.page-about .row2 .imagewrap .inner:before{width:10vw}
 }@media screen and (max-width:820px){.site-header{position:relative;top:0;left:0;z-index:300}
